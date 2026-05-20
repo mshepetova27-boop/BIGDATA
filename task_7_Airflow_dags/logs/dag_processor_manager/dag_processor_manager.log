@@ -12815,3 +12815,383 @@ File Path                             PID    Runtime      # DAGs    # Errors  La
 ------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
 /opt/airflow/dags/create_mart_dag.py                           1           0  0.14s           2026-02-14T06:57:40                      12
 ================================================================================
+[2026-05-19T20:07:39.453+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2026-05-19T20:07:39.455+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2026-05-19T20:07:39.456+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-05-19T20:07:39.457+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-05-19T20:07:39.496+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2026-05-19T20:07:39.568+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                                          0           0                                                   0
+/opt/airflow/dags/create_mart_performance_dag.py       176  0.03s             0           0                                                   0
+/opt/airflow/dags/scripts/build_mart_performance.py    179  0.02s             0           0                                                   0
+================================================================================
+[2026-05-19T20:08:09.973+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       198  0.01s             1           0  0.32s           2026-05-19T20:07:39                      45
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.23s           2026-05-19T20:07:39                      45
+/opt/airflow/dags/scripts/build_mart_performance.py    201  0.00s             0           0  0.06s           2026-05-19T20:07:39                       3
+================================================================================
+[2026-05-19T20:08:40.542+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       219  0.02s             1           0  0.10s           2026-05-19T20:08:10                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:08:10                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    222  0.00s             0           0  0.05s           2026-05-19T20:08:10                       3
+================================================================================
+[2026-05-19T20:09:11.084+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       247  0.01s             1           0  0.12s           2026-05-19T20:08:40                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-19T20:08:40                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    250  0.00s             0           0  0.05s           2026-05-19T20:08:40                       3
+================================================================================
+[2026-05-19T20:09:41.694+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       268  0.01s             1           0  0.11s           2026-05-19T20:09:11                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:09:11                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    271  0.00s             0           0  0.05s           2026-05-19T20:09:11                       3
+================================================================================
+[2026-05-19T20:10:12.261+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       289  0.02s             1           0  0.12s           2026-05-19T20:09:41                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.11s           2026-05-19T20:09:41                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    292  0.00s             0           0  0.05s           2026-05-19T20:09:41                       3
+================================================================================
+[2026-05-19T20:10:43.028+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       310  0.01s             1           0  0.12s           2026-05-19T20:10:12                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:10:12                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    313  0.00s             0           0  0.06s           2026-05-19T20:10:12                       3
+================================================================================
+[2026-05-19T20:11:13.444+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       331  0.02s             1           0  0.10s           2026-05-19T20:10:43                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:10:43                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    334  0.00s             0           0  0.04s           2026-05-19T20:10:43                       3
+================================================================================
+[2026-05-19T20:11:43.976+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       352  0.01s             1           0  0.10s           2026-05-19T20:11:13                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:11:13                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    355  0.00s             0           0  0.05s           2026-05-19T20:11:13                       3
+================================================================================
+[2026-05-19T20:12:14.712+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       373  0.02s             1           0  0.11s           2026-05-19T20:11:44                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-19T20:11:44                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    376  0.00s             0           0  0.06s           2026-05-19T20:11:44                       3
+================================================================================
+[2026-05-19T20:12:40.246+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-05-19T20:12:40.310+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2026-05-19T20:12:45.407+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       394  0.02s             1           0  0.10s           2026-05-19T20:12:14                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:12:14                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    397  0.00s             0           0  0.05s           2026-05-19T20:12:14                       3
+================================================================================
+[2026-05-19T20:13:16.141+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       415  0.01s             1           0  0.11s           2026-05-19T20:12:45                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:12:45                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    418  0.00s             0           0  0.05s           2026-05-19T20:12:45                       3
+================================================================================
+[2026-05-19T20:13:46.798+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       436  0.02s             1           0  0.12s           2026-05-19T20:13:16                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:13:16                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    439  0.00s             0           0  0.05s           2026-05-19T20:13:16                       3
+================================================================================
+[2026-05-19T20:14:17.411+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       457  0.02s             1           0  0.11s           2026-05-19T20:13:46                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-19T20:13:46                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    460  0.00s             0           0  0.05s           2026-05-19T20:13:46                       3
+================================================================================
+[2026-05-19T20:14:48.078+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       478  0.01s             1           0  0.10s           2026-05-19T20:14:17                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-19T20:14:17                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    481  0.00s             0           0  0.05s           2026-05-19T20:14:17                       3
+================================================================================
+[2026-05-19T20:15:18.604+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py       499  0.02s             1           0  0.10s           2026-05-19T20:14:48                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-19T20:14:48                      12
+/opt/airflow/dags/scripts/build_mart_performance.py    502  0.00s             0           0  0.05s           2026-05-19T20:14:48                       3
+================================================================================
+[2026-05-20T05:29:41.671+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2026-05-20T05:29:41.672+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2026-05-20T05:29:41.673+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-05-20T05:29:41.673+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-05-20T05:29:41.721+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2026-05-20T05:29:55.061+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.12s           2026-05-20T05:29:41                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.11s           2026-05-20T05:29:41                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:29:41                       3
+================================================================================
+[2026-05-20T05:30:25.594+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.13s           2026-05-20T05:30:12                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.12s           2026-05-20T05:30:12                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:30:12                       3
+================================================================================
+[2026-05-20T05:30:56.176+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.12s           2026-05-20T05:30:42                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-20T05:30:43                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:30:42                       3
+================================================================================
+[2026-05-20T05:31:26.745+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.10s           2026-05-20T05:31:13                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-20T05:31:13                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:31:13                       3
+================================================================================
+[2026-05-20T05:31:57.282+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.12s           2026-05-20T05:31:44                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-20T05:31:44                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.06s           2026-05-20T05:31:44                       3
+================================================================================
+[2026-05-20T05:32:27.833+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.11s           2026-05-20T05:32:14                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-20T05:32:14                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:32:14                       3
+================================================================================
+[2026-05-20T05:32:58.422+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.11s           2026-05-20T05:32:45                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-20T05:32:45                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.04s           2026-05-20T05:32:45                       3
+================================================================================
+[2026-05-20T05:33:28.922+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.11s           2026-05-20T05:33:15                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.09s           2026-05-20T05:33:15                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:33:15                       3
+================================================================================
+[2026-05-20T05:33:59.390+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.10s           2026-05-20T05:33:46                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-20T05:33:46                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.04s           2026-05-20T05:33:46                       3
+================================================================================
+[2026-05-20T05:34:29.898+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                              1           0  0.11s           2026-05-20T05:34:16                      12
+/opt/airflow/dags/create_mart_dag.py                                          1           0  0.10s           2026-05-20T05:34:16                      12
+/opt/airflow/dags/scripts/build_mart_performance.py                           0           0  0.05s           2026-05-20T05:34:16                       3
+================================================================================
+[2026-05-20T05:34:42.084+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-05-20T05:34:42.131+0000] {manager.py:824} INFO - There are 3 files in /opt/airflow/dags
+[2026-05-20T05:34:51.407+0000] {manager.py:1291} WARNING - Skipping processing of missing file: /opt/airflow/dags/scripts/build_mart_performance.py
+[2026-05-20T05:35:00.514+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_performance_dag.py                           1           0  0.12s           2026-05-20T05:34:47                      12
+/opt/airflow/dags/create_mart_dag.py                                       1           0  0.09s           2026-05-20T05:34:47                      12
+================================================================================
+[2026-05-20T05:35:30.963+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                         PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                                       1           0  0.10s           2026-05-20T05:35:17                      12
+/opt/airflow/dags/create_mart_performance_dag.py                           0           1  0.08s           2026-05-20T05:35:17                       3
+================================================================================
+[2026-05-20T05:35:53.941+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2026-05-20T05:41:14.328+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2026-05-20T05:41:14.328+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2026-05-20T05:41:14.329+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-05-20T05:41:14.329+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-05-20T05:41:14.361+0000] {manager.py:824} INFO - There are 2 files in /opt/airflow/dags
+[2026-05-20T05:41:14.425+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                179  0.02s             0           0                                                   0
+/opt/airflow/dags/create_mart_performance_dag.py    176  0.03s             0           0                                                   0
+================================================================================
+[2026-05-20T05:41:44.802+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                195  0.00s             1           0  0.29s           2026-05-20T05:41:14                      45
+/opt/airflow/dags/create_mart_performance_dag.py    192  0.02s             0           1  0.06s           2026-05-20T05:41:14                       3
+================================================================================
+[2026-05-20T05:42:15.299+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                211  0.00s             1           0  0.11s           2026-05-20T05:41:44                      12
+/opt/airflow/dags/create_mart_performance_dag.py    208  0.02s             0           1  0.08s           2026-05-20T05:41:44                       5
+================================================================================
+[2026-05-20T05:42:45.721+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                233  0.00s             1           0  0.10s           2026-05-20T05:42:15                      12
+/opt/airflow/dags/create_mart_performance_dag.py    230  0.01s             0           1  0.08s           2026-05-20T05:42:15                       5
+================================================================================
+[2026-05-20T05:43:16.128+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                249  0.00s             1           0  0.09s           2026-05-20T05:42:45                      12
+/opt/airflow/dags/create_mart_performance_dag.py    246  0.01s             0           1  0.06s           2026-05-20T05:42:45                       5
+================================================================================
+[2026-05-20T05:43:46.632+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                265  0.00s             1           0  0.09s           2026-05-20T05:43:16                      12
+/opt/airflow/dags/create_mart_performance_dag.py    262  0.01s             0           1  0.06s           2026-05-20T05:43:16                       5
+================================================================================
+[2026-05-20T05:44:17.168+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                281  0.00s             1           0  0.09s           2026-05-20T05:43:46                      12
+/opt/airflow/dags/create_mart_performance_dag.py    278  0.01s             0           1  0.07s           2026-05-20T05:43:46                       5
+================================================================================
+[2026-05-20T05:44:47.688+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                297  0.00s             1           0  0.10s           2026-05-20T05:44:17                      12
+/opt/airflow/dags/create_mart_performance_dag.py    294  0.01s             0           1  0.09s           2026-05-20T05:44:17                       5
+================================================================================
+[2026-05-20T05:45:18.211+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                           PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/create_mart_dag.py                313  0.00s             1           0  0.10s           2026-05-20T05:44:47                      12
+/opt/airflow/dags/create_mart_performance_dag.py    310  0.02s             0           1  0.07s           2026-05-20T05:44:47                       5
+================================================================================
