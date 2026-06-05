@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/real_estate_ontology.owl"
+         xmlns="http://example.org/real_estate_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/real_estate_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#владеет">
+  <rdfs:domain rdf:resource="#Владелец"/>
+  <rdfs:range rdf:resource="#ОбъектНедвижимости"/>
+  <rdfs:domain rdf:resource="#Покупатель"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Покупатель владеет объектом</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#продавец">
+  <rdfs:domain rdf:resource="#Сделка"/>
+  <rdfs:range rdf:resource="#Владелец"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В сделке участвует продавец</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#покупатель">
+  <rdfs:domain rdf:resource="#Сделка"/>
+  <rdfs:range rdf:resource="#Владелец"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В сделке участвует покупатель</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#объект_в_сделке">
+  <rdfs:domain rdf:resource="#ОбъектНедвижимости"/>
+  <rdfs:range rdf:resource="#Сделка"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Объект недвижимости участвует в сделке</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#имеет_ценовую_историю">
+  <rdfs:domain rdf:resource="#ОбъектНедвижимости"/>
+  <rdfs:range rdf:resource="#ЦеновойАрхив"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Объект имеет записи в ценовом архиве</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#участвует">
+  <rdfs:domain rdf:resource="#Покупатель"/>
+  <rdfs:range rdf:resource="#Сделка"/>
+  <rdfs:domain rdf:resource="#Продавец"/>
+  <rdfs:domain rdf:resource="#ОбъектНедвижимости"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Объект недвижимости участвует в сделке</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#имеет">
+  <rdfs:domain rdf:resource="#ОбъектНедвижимости"/>
+  <rdfs:range rdf:resource="#ЦеновойАрхив"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Объект имеет записи в ценовом архиве</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#ОбъектНедвижимости">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Владелец">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Сделка">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ЦеновойАрхив">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Покупатель">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Продавец">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+
+</rdf:RDF>

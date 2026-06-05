@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/real_estate_instances.owl"
+         xmlns="http://example.org/real_estate_instances.owl#">
+
+<owl:Ontology rdf:about="http://example.org/real_estate_instances.owl"/>
+
+<owl:ObjectProperty rdf:about="#owns">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="#Property"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#seller_in">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="#Transaction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#buyer_in">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="#Transaction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_seller">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="#Owner"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_buyer">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="#Owner"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_property">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="#Property"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_price_record">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="#PriceHistory"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#has_property_id">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_address">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_property_type">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_area">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_rooms">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_floor">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_build_year">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_cadastral_number">
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_owner_id">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_full_name">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_passport_series">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_passport_number">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_passport_issued_by">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_owner_address">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_phone">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_email">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_transaction_id">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_transaction_date">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_transaction_price">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_notary">
+  <rdfs:domain rdf:resource="#Transaction"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_price_history_id">
+  <rdfs:domain rdf:resource="#PriceHistory"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_change_date">
+  <rdfs:domain rdf:resource="#PriceHistory"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_new_price">
+  <rdfs:domain rdf:resource="#PriceHistory"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_ownership_share">
+  <rdfs:domain rdf:resource="#Owner"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Property">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Owner">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Transaction">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PriceHistory">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Owner_1">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Козлова Ирина Ефимовна</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2824</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">126225</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">АО «Чернова Ершов»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">г. Артем, алл. Лесозаводская, д. 983, 379402</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 542 351 16 15</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ernest_40@example.net</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_2">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Владилен Матвеевич Федоров</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5506</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">356787</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сафонов Лимитед</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Братск, бул. Курский, д. 2, 164752</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 534 192 8327</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opotapov@example.net</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_3">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Зимина Лидия Аркадьевна</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4657</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">246316</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ОАО «Голубев Калашникова»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к. Бологое, пер. Островского, д. 77, 242388</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+79696532871</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samolovavalerija@example.org</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_4">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Вишнякова Наталья Эльдаровна</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2679</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">809570</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">НПО «Фадеев»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д. Александров Гай, бул. Донской, д. 6 стр. 346, 048281</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+78932528809</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selivan_01@example.com</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_5">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ксения Егоровна Павлова</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9935</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191161</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ЗАО «Фомичева Яковлев»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. Боровск, ш. Кедровое, д. 97 стр. 94, 383465</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 (871) 331-50-98</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">haritonpoljakov@example.org</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_1">
+  <rdf:type rdf:resource="#Property"/>
+  <has_price_record rdf:resource="#PriceHistory_1"/>
+  <has_price_record rdf:resource="#PriceHistory_2"/>
+  <has_price_record rdf:resource="#PriceHistory_3"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Муравленко, пер. Тельмана, д. 2/1 стр. 223, 775331</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77.1</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64:80:567574:919</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_2">
+  <rdf:type rdf:resource="#Property"/>
+  <has_price_record rdf:resource="#PriceHistory_4"/>
+  <has_price_record rdf:resource="#PriceHistory_5"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ст. Радужный, ул. Сплавная, д. 801, 902517</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дом</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.7</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1985</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76:72:757193:245</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_3">
+  <rdf:type rdf:resource="#Property"/>
+  <has_price_record rdf:resource="#PriceHistory_6"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Хужир, алл. Привольная, д. 8 стр. 5/4, 268319</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.4</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79:20:245095:155</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_1">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-01-01</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11770469</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_2">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-10-05</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11517304</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_3">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025-11-03</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11285686</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_4">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-01-01</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7071494</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_5">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-07-25</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6874266</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_6">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-01-01</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12619072</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_1">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024-02-21</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22338917</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Зиновий Викентьевич Исаков</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_2">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-27</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13937210</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ефим Ефимович Беспалов</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_3">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-01</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29938806</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Лихачева Евфросиния Романовна</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_6">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Евдокимов Аристарх Давыдович</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7912</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">133326</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">РАО «Кононова»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д. Когалым, бул. Вахитова, д. 38 к. 4/8, 311656</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 701 065 13 33</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prohor_1979@example.com</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_7">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Суворов Ипат Артемьевич</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1488</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198246</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ОАО «Дементьева, Зиновьева и Ильина»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Ульяновск, ул. Азовская, д. 86, 360260</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 474 687 23 43</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">savinasofija@example.org</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_8">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Анастасия Альбертовна Логинова</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4582</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343962</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ЗАО «Самойлова, Артемьева и Михайлова»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">д. Валдай, ул. Профсоюзная, д. 26, 990916</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">89854353462</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ratmir51@example.org</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_9">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Феоктист Бориславович Богданов</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9279</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">731262</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Котов Лтд</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к. Боровск, наб. Балтийская, д. 97, 980841</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+7 (411) 824-49-35</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kapitonseleznev@example.com</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Owner_10">
+  <rdf:type rdf:resource="#Owner"/>
+  <has_owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</has_owner_id>
+  <has_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Антонин Бенедиктович Калашников</has_full_name>
+  <has_passport_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1434</has_passport_series>
+  <has_passport_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">688508</has_passport_number>
+  <has_passport_issued_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ОАО «Жданов, Беляев и Иванов»</has_passport_issued_by>
+  <has_owner_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Кузнецк, бул. Щербакова, д. 9/1, 128059</has_owner_address>
+  <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 (262) 045-0533</has_phone>
+  <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kazakovfedot@example.com</has_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_4">
+  <rdf:type rdf:resource="#Property"/>
+  <has_price_record rdf:resource="#PriceHistory_7"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">п. Асбест, ул. Терешковой, д. 9/2, 287339</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.5</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1992</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79:69:535970:64</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_5">
+  <rdf:type rdf:resource="#Property"/>
+  <has_price_record rdf:resource="#PriceHistory_8"/>
+  <has_price_record rdf:resource="#PriceHistory_9"/>
+  <has_price_record rdf:resource="#PriceHistory_10"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">к. Южно-Сахалинск, ш. Придорожное, д. 776 стр. 391, 117309</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дом</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">182.9</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1952</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83:58:600149:7</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_6">
+  <rdf:type rdf:resource="#Property"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">п. Льгов, пр. Фурманова, д. 224 к. 98, 690819</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">181.6</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">65:72:130434:399</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_7">
+  <rdf:type rdf:resource="#Property"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">клх Артем, наб. 60 лет СССР, д. 4, 023850</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.7</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:60:720644:578</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_8">
+  <rdf:type rdf:resource="#Property"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">г. Фатеж, бул. Парковый, д. 2 стр. 2/9, 240107</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Коммерческое</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">97.2</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1956</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43:58:443254:217</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_9">
+  <rdf:type rdf:resource="#Property"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с. Сосногорск, ш. Курское, д. 400 к. 1/9, 066266</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дом</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.1</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70:12:885408:553</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Property_10">
+  <rdf:type rdf:resource="#Property"/>
+  <has_property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</has_property_id>
+  <has_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">с. Геленджик, наб. Есенина, д. 75 стр. 233, 368900</has_address>
+  <has_property_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Квартира</has_property_type>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">137.0</has_area>
+  <has_rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_rooms>
+  <has_floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</has_floor>
+  <has_build_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1953</has_build_year>
+  <has_cadastral_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41:35:979995:21</has_cadastral_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_7">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-01-01</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11490048</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_8">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-01-01</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4880776</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_9">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-06-22</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4788415</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PriceHistory_10">
+  <rdf:type rdf:resource="#PriceHistory"/>
+  <has_price_history_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</has_price_history_id>
+  <has_change_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-07-17</has_change_date>
+  <has_new_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4775473</has_new_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_4">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-01-09</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21360792</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Карл Геннадиевич Евсеев</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_5">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-09</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14887883</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Голубев Марк Фадеевич</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_6">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025-12-15</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16546368</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Амвросий Иосифович Журавлев</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_7">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-01-30</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16566593</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Евгения Валериевна Громова</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_8">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-10-22</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">875982</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мамонтова Милица Игоревна</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_9">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2026-05-29</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4949455</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Порфирий Фомич Семенов</has_notary>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transaction_10">
+  <rdf:type rdf:resource="#Transaction"/>
+  <has_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</has_transaction_id>
+  <has_transaction_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025-02-12</has_transaction_date>
+  <has_transaction_price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25161678</has_transaction_price>
+  <has_notary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ярослав Тарасович Калинин</has_notary>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
